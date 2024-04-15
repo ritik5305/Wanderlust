@@ -8,6 +8,7 @@
         action="/listings"
         novalidate
         class="g-3 needs-validation"
+        enctype="multipart/form-data"
       >
         <div class="mb-3">
           <label for="title" class="form-lable">Title</label>
@@ -32,13 +33,14 @@
           <div class="valid-feedback">description Looks good!</div>
           <div class="invalid-feedback">description should be valid</div>
         </div>
+
         <div class="mb-3">
-          <label for="image" class="form-lable">image Link</label>
+          <label for="image" class="form-lable">Upload Listing image</label>
           <input
-            type="text"
-            placeholder="Enter_image URL/Link"
             name="listing[image]"
+            type="file"
             class="form-control"
+            required
           />
         </div>
 
